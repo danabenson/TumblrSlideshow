@@ -1,0 +1,16 @@
+﻿@model TumblrSlideshow.Models.SlideshowViewModel
+@{
+    ViewBag.Title = "Build";
+}
+
+<h2>@Model.BlogName</h2>
+<h3>@Model.PostsCount images</h3>
+
+<div id="gallery">
+    @foreach (var photo in Model.Pictures)
+    {
+        <a href="@photo.Url" data-gallery="gallery">
+            <img src="@photo.ThumbnailUrl"/>
+        </a>
+    }    
+</div>

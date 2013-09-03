@@ -1,0 +1,34 @@
+﻿@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>Tumblr Slideshow Generator</h1>
+                <h2>View a slideshow of any tumblr blog.</h2>
+            </hgroup>
+            <p>
+            </p>
+        </div>
+    </section>
+}
+@using(Html.BeginForm("Build", "Slideshow", FormMethod.Post))
+{
+    <ol class="round">
+    <li class="one">
+        <h5>Enter Tumblr name or url</h5>
+        @Html.TextBox("blogname")
+    </li>
+
+    <li class="two">
+        <h5>Go!</h5>
+        <button type="submit">Go</button>
+    </li>
+
+    <li class="three" style="display: none">
+        <h5>Find Web Hosting</h5>
+        You can easily find a web hosting company that offers the right mix of features
+        and price for your applications.
+        <a href="http://go.microsoft.com/fwlink/?LinkId=245157">Learn more…</a>
+    </li>
+</ol>
+
+}
